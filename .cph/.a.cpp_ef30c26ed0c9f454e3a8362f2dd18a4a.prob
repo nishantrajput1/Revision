@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"c:\\Users\\nisha\\OneDrive\\Desktop\\React\\Scratch\\a.cpp","tests":[{"id":1767945912637,"input":"4 5\n1 2 3\n2 4 -1\n1 3 -2\n3 4 7\n1 4 4","output":""},{"id":1768116593027,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\nisha\\OneDrive\\Desktop\\React\\Scratch\\a.cpp","group":"local","local":true}
