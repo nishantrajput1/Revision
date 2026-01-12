@@ -16,17 +16,19 @@ class UserClass extends React.Component
          // best place to create state variables 
     }
 
-    async componentDidMount(){
-        console.log("Component mounted successfully");
-        const data = await fetch("https://api.github.com/users/nishantrajput1");
-        const json = await data.json();
-        console.log(json);
-        this.setState({
-            userInfo : json,
-        })
+    componentDidMount(){
+        this.timer = setInterval(()=>{
+            console.log("Namaste Doston ! ");
+        },1000)
+        console.log("Child - component DidMount");
+        
     }
     componentDidUpdate(){
         console.log("Component Did Update");
+    }
+    componentWillUnmount(){
+        clearInterval(this.timer);
+        console.log("Component will unmount");
     }
     render(){
         const {name , bio,avatar_url} = this.state.userInfo
