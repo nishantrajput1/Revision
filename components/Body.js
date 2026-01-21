@@ -2,27 +2,38 @@ import { useEffect,useState } from "react";
 import { useParams } from "react-router";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = ()=>{
     const {category} = useParams();
     const [ListOfRestaurants,setListOfRestaurants] = useState([]);
     const [filteredRestaurants,setfilteredRestaurants] = useState([]);
     const [searchText,setsearchText] = useState("");
     // every time the category is change we need to call the use effect
+    const onlineStatus = useOnlineStatus();
+    console.log(`Your online status : ${onlineStatus}`)
     useEffect(()=>{
         if(!category) return;
         console.log("UseEffect is Called");
         fetchData();
     },[category]);
-
-    const fetchData = async ()=>{
-        const data = await fetch(`https://free-food-menus-api-two.vercel.app/${category}`);
+    if(onlineStatus==false){
+        return (
+            <h1> You are offline !</h1>);
+    }
+    const fetchData = async () => {
+    try {
+        const data = await fetch(
+        `https://free-food-menus-api-two.vercel.app/${category}`
+        );
         const json = await data.json();
-        console.log(json);
         setListOfRestaurants(json);
         setfilteredRestaurants(json);
+    } catch (error) {
+        console.error("Fetch failed:", error);
     }
+    };
 
+    
 
 
     // Category page load horaha hai

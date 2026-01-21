@@ -1,3 +1,4 @@
+import useOnlineStatus from "../utils/useOnlineStatus";
 import CategoryCard from "./CategoryCard";
 const categories = [
   {
@@ -73,6 +74,11 @@ const categories = [
 ];
 
 const Home = ()=>{
+    const onlineStatus = useOnlineStatus();
+    console.log(`On the home page current online status : ${onlineStatus}`);
+    if(onlineStatus==false){
+      return (<h1>Please Check your internet connection !!</h1>);
+    }
     return (
         <div>
         <div className="HomeText">
