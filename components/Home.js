@@ -81,10 +81,10 @@ const Home = ()=>{
     }
     return (
         <div>
-        <div className="HomeText">
-            <h1>What do you want to eat today ?</h1>
+        <div className="HomeText flex place-content-center ">
+            <h1 className=" font-bold text-4xl py-4 font-extrabold" >What do you want to eat today ?</h1>
         </div>
-        <div className="CategoryCard">
+        <div className="CategoryCard flex-wrap flex">
             {
                 categories.map((Category)=>{
                     return <CategoryCard key={Category.id} catdata ={Category}/>

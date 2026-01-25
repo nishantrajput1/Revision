@@ -43,9 +43,9 @@ const Body = ()=>{
     // console.log(ListOfRestaurants);
     return (
         <div>
-            <div className="search-bar">
-            <input type="text" placeholder="Enter restaurant name" value={searchText} onChange={(e)=>setsearchText(e.target.value)} />
-            <button className="search-btn"  onClick={()=>{
+            <div className="search-bar  m-4 p-4 flex justify-center ">
+            <input className="border px-100 m-4 p-4 rounded-3xl shadow bg-gray-100"  type="text" placeholder="Enter restaurant name" value={searchText} onChange={(e)=>setsearchText(e.target.value)} />
+            <button className="search-btn m-4 px-4 py-2 border bg-green-200 "  onClick={()=>{
                 console.log(searchText);
                 
                 const filteredRestaurantslist = ListOfRestaurants.filter((Restaurant)=>{
@@ -58,7 +58,7 @@ const Body = ()=>{
             }}>
                 Search
             </button>
-            <button className="filter-btn" onClick={()=>{
+            <button className="filter-btn border m-3 p-2" onClick={()=>{
                 const filterList = ListOfRestaurants.filter((Restaurant)=>{
                     // console.log(Restaurant.name);
                     console.log(Restaurant.rate);
@@ -75,7 +75,7 @@ const Body = ()=>{
                 Top rated Restaurant 
             </button>
             </div>
-            <div className="res-cards">
+            <div className="res-cards flex-wrap flex">
                 {
                     filteredRestaurants.map(function(Restaurant){
                         return <RestaurantCard key={Restaurant.id} resData={Restaurant}/>   

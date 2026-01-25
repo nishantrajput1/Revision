@@ -7,16 +7,17 @@ const Header = ()=>{
     // Logo
     const onlineStatus = useOnlineStatus();
     return (
-        <div className="Header">
+        <div className="flex place-content-between bg-pink-200 shadow-lg m-2 ">
            <div className="logo-container">
-            <img className="logo" src="https://i.pinimg.com/originals/a8/c0/9a/a8c09ae229e8ce7fdbf815282e68c893.jpg" alt="Img" />
+            <img className="w-50" src="https://i.pinimg.com/originals/a8/c0/9a/a8c09ae229e8ce7fdbf815282e68c893.jpg" alt="Img" />
            </div>
-           <div className="navbar">
-            <ul className="nav-items">
-                <li>Status : {onlineStatus ? "✅" : "🛑"}</li>
-                <li><Link to = "/">Home</Link></li>
-                <li><Link to = "/about">AboutUs</Link></li>
-                <li><Link to = "/contact">Contact</Link></li>
+           <div className="flex items-center">
+            <ul className="flex p-4 m-4 space-x-2.5  ">
+                <li className="px-4">Status : {onlineStatus ? "✅" : "🛑"}</li>
+                <li className="px-4" ><Link to = "/">Home</Link></li>
+                <li className="px-4"><Link to = "/about">AboutUs</Link></li>
+                <li className="px-4"><Link to = "/contact">Contact</Link></li>
+                <li className="px-4"><Link to = "/Grocery">Grocery</Link></li>
                 
                 <li>Cart</li>
             </ul>

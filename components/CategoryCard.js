@@ -9,8 +9,8 @@ const CategoryCard=({catdata})=>{
     // console.log(`Name : ${catdata}`);
     
     return (
-        <Link to= {`/restaurant/${name}`}><div className="cat-card">
-            <img className="cat-image" src={image} alt="" />
+        <Link to= {`/restaurant/${name}`}><div className="cat-card m-4 p-4 w-70 border hover:shadow-2xl  bg-gray-100">
+            <img className="w-72 h-50   cat-image" src={image} alt="" />
             <h1>
                 {name} 
             </h1>            

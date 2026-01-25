@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"c:\\Users\\nisha\\OneDrive\\Desktop\\React\\Scratch\\components\\a.cpp","tests":[{"id":1768996018757,"input":"5\nbaa abcd abca cab cad","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\nisha\\OneDrive\\Desktop\\React\\Scratch\\components\\a.cpp","group":"local","local":true}
